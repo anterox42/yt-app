@@ -20,25 +20,29 @@ const SearchBar = ({ onFormSubmit }) => {
           <label>
             <span style={{ color: "red" }}>YouTube</span> Video Search
           </label>
-          <input
-            type="text"
-            value={term}
-            onChange={(event) => {
-              setTerm(event.target.value);
-            }}
-          />
+          <div className="ui action input">
+            <input
+              type="text"
+              value={term}
+              placeholder="Search..."
+              onChange={(event) => {
+                setTerm(event.target.value);
+              }}
+            />
+            <button class="ui red button">Search</button>
+          </div>
         </div>
       </form>
       <div style={{ marginTop: "5px" }}>
-        <button
+        <div
           className="ui button"
           onClick={(term) => onButtonClick("Lo-Fi")}
         >
           Lo-Fi
-        </button>
-        <button className="ui button" onClick={(term) => onButtonClick("Cats")}>
+        </div>
+        <div className="ui button" onClick={(term) => onButtonClick("Cats")}>
           Cats
-        </button>
+        </div>
       </div>
     </div>
   );

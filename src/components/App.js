@@ -23,7 +23,7 @@ const App = () => {
             <VideoDetail video={selectedVideo} />
           </div>
           <div className="five wide column">
-            <VideoList
+            <VideoList  
               onVideoSelect={setSelectedVideo}
               videos={videos}
             />
