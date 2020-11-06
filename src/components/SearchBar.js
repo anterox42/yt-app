@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Emoji from 'a11y-react-emoji';
 
 const SearchBar = ({ onFormSubmit }) => {
   const [term, setTerm] = useState("");
@@ -18,7 +19,7 @@ const SearchBar = ({ onFormSubmit }) => {
       <form onSubmit={onSubmit} className="ui form">
         <div className="field">
           <label>
-            <span style={{ color: "red" }}>YouTube</span> Video Search
+            Search <span style={{ color: "red" }}>Youtflix</span>
           </label>
           <div className="ui action input">
             <input
@@ -38,10 +39,10 @@ const SearchBar = ({ onFormSubmit }) => {
           className="ui button"
           onClick={(term) => onButtonClick("Lo-Fi")}
         >
-          Lo-Fi
+          <Emoji symbol="🎧" label="LoFi" />
         </div>
         <div className="ui button" onClick={(term) => onButtonClick("Cats")}>
-          Cats
+        <Emoji symbol="🐱" label="Cats" />
         </div>
       </div>
     </div>
